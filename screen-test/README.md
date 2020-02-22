@@ -1,68 +1,42 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Title
 
-In the project directory, you can run:
+Screen Test
 
-### `npm start`
+### Description
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Screen Test is a simple movie trivia game, displaying one question with four multiple choice answers at a time on the screen. after 10 questions, the user recieves a score based off of how many questions they correctly answered. it requires the functionality of fetching an array of question objects from an api and displaying them one by one as the user iterates through them.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### wireframes
+![phone page start](src/wireframes/Phone-page1.png)
+![phone page difficulty](src/wireframes/Phone-page-difficulty.png)
+![phone page question](src/wireframes/Phone-page-question.png)
+![phone page final](src/wireframes/Phone-page-final.png)
+![Ipad page question](src/wireframes/Ipad-question.png)
+![Webpage question](src/wireframes/Web-page-question.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Component Heirarchy
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Component Tree](src/wireframes/Component-Tree.png)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### API
+![opentdb](https://opentdb.com/api.php?amount=10&category=11)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## MVP
+make an api call that returns an array of questions.
+display those questions with answers one by one. the correct answer's order must be randomized. the next question is not displayed until an answer is given on the current answer. each answer contributes data to the score. on the final page, the score is displayed.
+responsive design with 3 media queries
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Post MVP
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+let users choose the difficulty of the questions
+delay timer after user answers question to display css animation of correct or incorrect on their answer.
+ability to restart game at anytime from the header.
+a time limit on each question
+a fun logo?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

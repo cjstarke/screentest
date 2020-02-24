@@ -29,7 +29,7 @@ Screen Test is a simple movie trivia game, displaying one question with four mul
 ![Component Tree](src/wireframes/Component-Tree.png)
 
 ## API
-![opentdb](https://opentdb.com/api.php?amount=10&category=11)
+opentdb: https://opentdb.com/api.php?amount=10&category=11
 
 
 ## MVP

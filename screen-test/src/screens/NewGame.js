@@ -29,7 +29,7 @@ class NewGame extends Component {
      
       
           <Button
-            value='difficult'
+            value='hard'
             name='hard'
             onClick={this.props.api}>hard
           </Button>

@@ -17,6 +17,14 @@ class Container extends Component {
       isloading: true
     }
   }
+  restartGame = () => {
+    this.props.restart()
+    this.setState({
+      questions: [],
+      answers: [],
+      isloading: true 
+    })
+  }
 
   getApi = async (e) => {
     const level = e.target.value
@@ -46,7 +54,7 @@ class Container extends Component {
         />
          <Route
           exact path={"/finalscreen"}
-          render={(props) => <FinalScreen score={this.props.number} restart={this.props.restart}{...props} />}
+          render={(props) => <FinalScreen score={this.props.number} restart={this.restartGame}{...props} />}
         />
         <Route
            path={"/questions/:id"}

@@ -11,7 +11,8 @@ class Question extends Component {
       answers: ['hello'],
       id: 0,
       isloading: true,
-      score: 0
+      score: 0,
+
       
     }
   }
@@ -23,7 +24,6 @@ class Question extends Component {
       id: this.props.match.params.id,
       isloading: this.props.loading,
       answers: undefined
-      
     }) 
     console.log(`state id: ${this.state.id}`)
   }
@@ -41,9 +41,11 @@ class Question extends Component {
     this.setState({
       answers: newanswers
     })
+    console.log(`state answers: ${newanswers}`)
   
   }
   displayAnswers = (answers) => {
+    console.log('display answers')
     return (
       <>
         <div>
@@ -98,6 +100,7 @@ class Question extends Component {
           id: newid
         })
         this.props.history.push(`/questions/${newid}`)
+        this.randomAnswer()
       }, 1500);
         
     } else {
@@ -107,6 +110,7 @@ class Question extends Component {
           id: 0
         })
         this.props.history.push(`/finalscreen`)
+        
       }, 2000);
         
     

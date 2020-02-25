@@ -1,0 +1,22 @@
+.contain {
+background-color: #e4572e;
+width: 100%;
+height: 90vh;
+color: white
+}
+button {
+  font-size: larger;
+  background-color: white;
+}
+.newgame{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.startchoices {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

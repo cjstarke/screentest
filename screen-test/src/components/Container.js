@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Question from '../screens/Question'
 import NewGame from '../screens/NewGame'
 import { Link, Route, Switch, Redirect } from 'react-router-dom'
+import FinalScreen from '../screens/FinalScreen'
 import { API_URL } from '../constants'
 import axios from 'axios'
 
@@ -42,7 +43,11 @@ class Container extends Component {
         <Route
             exact path={"/"}
           render={(props) => <NewGame api={this.getApi}{...props}/> }
-          />
+        />
+         <Route
+          exact path={"/finalscreen"}
+          render={(props) => <FinalScreen score={this.props.number} restart={this.props.restart}{...props} />}
+        />
         <Route
            path={"/questions/:id"}
           render={(props) => <Question  score={this.props.score} questions={this.state.questions} loading={this.state.isloading} answers={this.state.answers}{...props}/> }

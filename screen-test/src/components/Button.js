@@ -14,6 +14,7 @@ class Button extends Component{
         value={this.props.value}
         name={this.props.name}
         onClick={this.props.onClick}
+        className={this.props.className}
       >{this.props.name}</button>
     )
   }

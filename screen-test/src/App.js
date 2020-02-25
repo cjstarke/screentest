@@ -20,12 +20,16 @@ class App extends Component {
     }))
     console.log(`state score: ${this.state.score}`)
   }
+  restartScore = () => {
+    this.setState({
+      score: 0
+    })
+  }
   render() {
     return (
       <div className="App">
-        <h1>hello</h1>
-        <Header score={this.state.score}/>
-        <Container score={this.setScore}/>
+        <Header score={this.state.score} restart={this.restartScore}/>
+        <Container score={this.setScore} restart={this.restartScore}/>
       </div>)
   }
   
@@ -33,11 +37,7 @@ class App extends Component {
   
   
  
-  // scoreChange = (event) => {
-  //   this.setState((prevState) => ({
-  //     score: prevState.score + event.target.value
-  //   }))
-  // }
+ 
 
   
     

@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.button {
+  background-color: aqua;
+}
+.true {
+  background-color: green;
+}
+.false {
+  background-color: red;
+}

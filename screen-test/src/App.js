@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Container from './components/Container'
+import Header from './components/Header'
+import { Link, Route, Switch } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+
+class App extends Component { 
+  constructor() {
+    super() 
+    this.state = {
+      score: 0
+    }
+  }
+  setScore = (number) => {
+    this.setState((prevState) => ({
+      score: prevState.score*1 + number*1
+    }))
+    console.log(`state score: ${this.state.score}`)
+  }
+  restartScore = () => {
+    this.setState({
+      score: 0
+    })
+  }
+  render() {
+    return (
+      <div className="App">
+        <Header score={this.state.score} restart={this.restartScore}/>
+        <Container score={this.setScore} restart={this.restartScore}/>
+      </div>)
+  }
+  
 }
+  
+  
+ 
+ 
+
+  
+    
+   
+
+  
 
 export default App;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch, Redirect } from 'react-router-dom'
-
+import './Header.css'
 
 class Header extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ class Header extends Component {
   } 
   render() {
     return (
-      <div>
+      <div className='header'>
         
         <div>Screen Test</div>
         <Link to= '/' onClick={this.props.restart}>

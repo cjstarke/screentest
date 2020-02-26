@@ -11,32 +11,30 @@ class NewGame extends Component {
 
   render() {
     return (
-      <>
-        <h1>start game</h1>
-        
+      <div className= 'newgame'>
+        <div className= 'heading'>Welcome to Screen Test</div>
+        <div className='subhead'>to start the test, choose a difficulty level below</div>
+        <div className= 'startchoices'>
           <Button
             value='easy'
+            className= 'start'
             name='easy'
             onClick={this.props.api}>easy
           </Button>
-       
-       
           <Button
             value='medium'
             name='medium'
+            className='start'
             onClick={this.props.api}>easy
           </Button>
-     
-      
           <Button
             value='hard'
             name='hard'
+            className ='start'
             onClick={this.props.api}>hard
           </Button>
-    
-       
-        
-      </>
+        </div>
+      </div>
     )
   }
 }

@@ -8,7 +8,7 @@ function FinalScreen(props) {
   console.log(finalscore)
   return (
     <div>
-      <div>Congrats you got <span>{finalscore}</span> out of 10</div>
+      <div>Congrats you got <span>{finalscore}</span> out of 5</div>
       <Link to= '/' onClick = {props.restart}>
         Play Again 
       </Link>

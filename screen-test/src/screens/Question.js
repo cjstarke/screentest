@@ -32,10 +32,10 @@ class Question extends Component {
     const right = Replace(thisQ.correct_answer)
     const wrong = thisQ.incorrect_answers
     let firstAnswers = [ 
-      {'ans': right, 'guess': 1},
-      {'ans': Replace(wrong[0]), 'guess': 0},
-      {'ans': Replace(wrong[1]), 'guess': 0},
-      { 'ans': Replace(wrong[2]), 'guess': 0}
+      {'ans': right, 'guess': 1, 'color': 'white', 'number': 1},
+      {'ans': Replace(wrong[0]), 'guess': 0, 'color': 'white', 'number': 2},
+      {'ans': Replace(wrong[1]), 'guess': 0, 'color': 'white', 'number': 3},
+      { 'ans': Replace(wrong[2]), 'guess': 0, 'color': 'white', 'number': 4}
     ]
     const newanswers = ShuffleArr(firstAnswers)
     this.setState({
@@ -53,7 +53,11 @@ class Question extends Component {
             name={answers[0].ans}
             value={answers[0].guess}
             onClick={this.onAnswer} 
-            className= {`button${answers[0].guess}`}
+            color={answers[0].color}
+            className={`button ${answers[0].guess}`}
+            style={{ backgroundColor: this.state.answers[0].color }}
+            number= {answers[0].number}
+            
           />
         </div>
         <div>
@@ -61,7 +65,10 @@ class Question extends Component {
             name={answers[1].ans}
             value={answers[1].guess}
             onClick={this.onAnswer} 
-            className= {`button ${answers[1].guess}`}
+            color={answers[1].color}
+            className={`button ${answers[1].guess}`}
+            style={{ backgroundColor: this.state.answers[1].color}}
+            number= {answers[1].number}
           />
         </div>
         <div>
@@ -69,7 +76,10 @@ class Question extends Component {
             name={answers[2].ans}
             value={answers[2].guess}
             onClick={this.onAnswer}
-            className= {`button ${answers[2].guess}`}
+            color={answers[2].color}
+            className={`button ${answers[2].guess}`}
+            style={{ backgroundColor: this.state.answers[2].color}}
+            number={answers[2].number}
           />
         </div>
         <div>
@@ -77,15 +87,29 @@ class Question extends Component {
             name={answers[3].ans}
             value={answers[3].guess}
             onClick={this.onAnswer}
-            className= {`button ${answers[3].guess}`}
+            color={answers[3].color}
+            className={`button ${answers[3].guess}`}
+            style={{ backgroundColor: this.state.answers[3].color }}
+            number= {answers[3].number}
           />
         </div>
       </>)
   }
   
   onAnswer = (e) => {
-  
+    
+
     const num = e.target.value
+    
+    
+    for (let index = 0; index <= 3; index++) {
+      if (this.state.answers[index].guess === 1) {
+        let  answers = {...this.state.answers}
+        answers[index].color = 'green'
+        this.setState({answers})
+      } 
+    }
+    
     this.props.score(num)
     const oldid = parseInt(this.props.match.params.id)
     const newid = (oldid + 1)
@@ -100,7 +124,7 @@ class Question extends Component {
           id: newid
         })
         this.props.history.push(`/questions/${newid}`)
-        this.randomAnswer()
+        this.componentDidMount()
       }, 1500);
         
     } else {

@@ -12,9 +12,12 @@ class Button extends Component{
     return (
       <button
         value={this.props.value}
+        color={this.props.color}
         name={this.props.name}
         onClick={this.props.onClick}
         className={this.props.className}
+        style={this.props.style}
+        number={this.props.number}
       >{this.props.name}</button>
     )
   }

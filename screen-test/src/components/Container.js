@@ -5,6 +5,8 @@ import { Link, Route, Switch, Redirect } from 'react-router-dom'
 import FinalScreen from '../screens/FinalScreen'
 import { API_URL } from '../constants'
 import axios from 'axios'
+import "./Container.css"
+import './Header.css'
 
 const api = API_URL
 
@@ -28,8 +30,7 @@ class Container extends Component {
 
   getApi = async (e) => {
     const level = e.target.value
-    console.log(level)
-   
+ 
     try {
       const response = await axios.get(`${api}${level}`)
       console.log(response.data.results)
@@ -47,7 +48,7 @@ class Container extends Component {
   render() {
     
     return (
-      <>
+      <div className= 'contain'>
         <Route
             exact path={"/"}
           render={(props) => <NewGame api={this.getApi}{...props}/> }
@@ -63,7 +64,7 @@ class Container extends Component {
         { this.state.isloading ? (<></>): (<Redirect to = "/questions/0" />)
           
         }
-      </>
+      </div>
     )
   }
 }

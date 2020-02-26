@@ -17,20 +17,20 @@ class NewGame extends Component {
         <div className= 'startchoices'>
           <Button
             value='easy'
-            className= 'start'
+            className= 'start darkblue'
             name='easy'
             onClick={this.props.api}>easy
           </Button>
           <Button
             value='medium'
             name='medium'
-            className='start'
+            className='start yellow'
             onClick={this.props.api}>easy
           </Button>
           <Button
             value='hard'
             name='hard'
-            className ='start'
+            className ='start lightblue'
             onClick={this.props.api}>hard
           </Button>
         </div>

@@ -54,51 +54,49 @@ class Question extends Component {
     console.log('display answers')
     return (
       <>
-        <div>
+        
           <Button
             name={answers[0].ans}
             value={answers[0].guess}
             onClick={this.onAnswer} 
             color={answers[0].color}
-            className={`button ${answers[0].guess} darkblue`}
+            className={`button answer ${answers[0].guess} darkblue`}
             style={{ backgroundColor: this.state.answers[0].color }}
             number= {answers[0].number}
             
           />
-        </div>
-        <div>
+       
+        
           <Button
             name={answers[1].ans}
             value={answers[1].guess}
             onClick={this.onAnswer} 
             color={answers[1].color}
-            className={`button ${answers[1].guess} yellow`}
+            className={`button answer ${answers[1].guess} yellow`}
             style={{ backgroundColor: this.state.answers[1].color}}
             number= {answers[1].number}
           />
-        </div>
-        <div>
+        
           <Button
             name={answers[2].ans}
             value={answers[2].guess}
             onClick={this.onAnswer}
             color={answers[2].color}
-            className={`button ${answers[2].guess} lightblue`}
+            className={`button answer ${answers[2].guess} lightblue`}
             style={{ backgroundColor: this.state.answers[2].color}}
             number={answers[2].number}
           />
-        </div>
-        <div>
+        
           <Button
             name={answers[3].ans}
             value={answers[3].guess}
             onClick={this.onAnswer}
             color={answers[3].color}
-            className={`button ${answers[3].guess} lightgreen`}
+            className={`button answer ${answers[3].guess} lightgreen`}
             style={{ backgroundColor: this.state.answers[3].color }}
             number= {answers[3].number}
           />
-        </div>
+        
       </>)
   }
   
@@ -143,13 +141,13 @@ class Question extends Component {
     }
     const dead = 0
     return (
-      <>
-        {this.state.isloading || this.state.answers === undefined  ? (<div>start over man</div>) : (<div>
-          <h1>Question {quest}</h1>
-          <h2>{Replace(questions[id].question)}</h2>
-          <div>{this.displayAnswers(this.state.answers)}</div>
-        </div>)}
-      </>
+      <div className='question'>
+        {this.state.isloading || this.state.answers === undefined  ? (<div>start over man</div>) : (<>
+          <div className='subhead'>Question {quest}</div>
+          <div className='subsubhead'>{Replace(questions[id].question)}</div>
+          <div className='answers'>{this.displayAnswers(this.state.answers)}</div>
+        </>)}
+      </div>
     )
   }
 }

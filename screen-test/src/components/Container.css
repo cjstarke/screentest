@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i&display=swap');
+
 .contain {
 background-color: #e4572e;
 width: 100%;
 height: 90vh;
-color: white
+color: white;
+font-family: 'IBM Plex Sans';
 }
 button {
   background-color: #669bbc;
   color: white;
   border: 2px white solid;
   border-radius: 10px;
+  font-family: 'IBM Plex Sans';
+  font-weight: bold;
 
 }
 .newgame{
@@ -25,7 +30,7 @@ button {
   align-items: center;
 }
 .start {
-  height:15%;
+  height:17%;
   width:50%;
   font-size: 5vh;
 }
@@ -50,6 +55,12 @@ button {
   background-color: #a8c686;
   color: white ;
   border: 7px solid white;
+}
+.heading {
+  font-size: 9vh;
+}
+.subhead {
+  font-size: 5vh;
 }
 
 

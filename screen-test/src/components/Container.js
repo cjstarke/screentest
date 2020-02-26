@@ -16,7 +16,8 @@ class Container extends Component {
     this.state = {
       questions: [],
       answers: [],
-      isloading: true
+      isloading: true,
+      gotapi: false
     }
   }
   restartGame = () => {
@@ -36,7 +37,8 @@ class Container extends Component {
       console.log(response.data.results)
       this.setState({
         questions: response.data.results,
-        isloading: false
+        isloading: false,
+        gotapi: true
       })
       
     } catch (error) {
@@ -59,7 +61,7 @@ class Container extends Component {
         />
         <Route
            path={"/questions/:id"}
-          render={(props) => <Question  score={this.props.score} questions={this.state.questions} loading={this.state.isloading} answers={this.state.answers}{...props}/> }
+          render={(props) => <Question api={this.state.gotapi} score={this.props.score} questions={this.state.questions} loading={this.state.isloading} answers={this.state.answers}{...props}/> }
         />
         { this.state.isloading ? (<></>): (<Redirect to = "/questions/0" />)
           

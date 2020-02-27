@@ -3,7 +3,7 @@
 .contain {
 background-color: #e4572e;
 width: 100%;
-height: 90vh;
+height: 89vh;
 color: white;
 font-family: 'IBM Plex Sans';
 }
@@ -93,6 +93,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  
 }
 .playagain {
   height: 100%;

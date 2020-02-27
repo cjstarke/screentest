@@ -25,6 +25,12 @@
   justify-content: space-evenly;
   font-size: 4vh;
 }
+@media only screen and (max-width: 1250px)  {
+  .headerright {
+    width: 70vw;
+    font-size: 3.5vh;
+  }
+}
 @media only screen and (max-width: 950px) {
   .logo {
     display: none;
@@ -32,6 +38,9 @@
   .headerright {
     width: 100vw;
     font-size: 4vh;
+    justify-content: space-around;
   
   }
+ 
 }
+

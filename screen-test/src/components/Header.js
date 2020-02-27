@@ -13,11 +13,15 @@ class Header extends Component {
     return (
       <div className='header'>
         
-        <div>Screen Test</div>
+        <div className='logodiv head'>
+          <img src='https://i.imgur.com/w6JVp8u.png' alt='logo' className= 'logo'/>
+        </div>
+        <div>
         <Link to= '/' onClick={this.props.restart}>
           New Game
         </Link>
-        <div>Score: {this.props.score}</div>
+        </div>
+        <div className= 'head' >Score: {this.props.score}</div>
       </div>)
 
   }

@@ -2,9 +2,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 10vh;
-  color: #e4572e;
+  color: #29335c;
   background-color: white;
+  font-size: 200%;
 
+}
+.logo {
+  height: 100%
+}
+.logodiv {
+  height: 100%;
+}
+.head {
+  margin: 0 4%;
 }

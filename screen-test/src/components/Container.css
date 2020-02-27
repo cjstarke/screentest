@@ -23,7 +23,7 @@ button {
   justify-content: space-evenly;
 }
 .startchoices {
-  height: 65%;
+  height: 55%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -31,8 +31,8 @@ button {
 }
 .start {
   height:17%;
-  width:50%;
-  font-size: 5vh;
+  width: 45%;
+  font-size: 4vh;
 }
 .darkblue {
   background-color:#29335c;
@@ -57,13 +57,14 @@ button {
   border: 7px solid white;
 }
 .heading {
-  font-size: 9vh;
+  font-size: 7vh;
 }
 .subhead {
   font-size: 5vh;
 }
 .subsubhead {
-  font-size: 4vh
+  font-size: 3vh;
+  margin: 0 15%;
 }
 .question {
   height: 100%;
@@ -82,9 +83,43 @@ button {
 .answer {
   height:17%;
   margin: 3% 2%;
-  width:40%;
-  font-size: 4vh;
+  width: 42%;
+  font-size: 3vh;
+  overflow: hidden;
 }
+.finalscreen {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.playagain {
+  height: 100%;
+  width:50%;
+  font-size: 4vh;
+  background-color: #29335c;
+  color: white ;
+  border: 7px solid white;;
+}
+a {
+  height: 100%;
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+  color: #29335c;
+}
+span {
+  color: #29335c
+}
+
+.linkdiv {
+  height: 17%;
+}
+.bigimage {
+  height: 18vh;
+}
+
 
 
 

@@ -53,7 +53,7 @@ class Container extends Component {
       <div className= 'contain'>
         <Route
             exact path={"/"}
-          render={(props) => <NewGame api={this.getApi}{...props}/> }
+          render={(props) => <NewGame api={this.getApi}{...props} restart={this.restartGame}/> }
         />
          <Route
           exact path={"/finalscreen"}

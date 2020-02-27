@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link, Route, Switch, Redirect } from 'react-router-dom'
-
+import './Header.css'
 
 class Header extends Component {
   constructor(props) {
@@ -11,13 +11,19 @@ class Header extends Component {
   } 
   render() {
     return (
-      <div>
+      <div className='header'>
         
-        <div>Screen Test</div>
-        <Link to= '/' onClick={this.props.restart}>
-          New Game
-        </Link>
-        <div>Score: {this.props.score}</div>
+        <div className='logodiv head'>
+          <img src='https://i.imgur.com/w6JVp8u.png' alt='logo' className= 'logo'/>
+        </div>
+        <div className='headerright'>
+          <div>
+            <Link to= '/' onClick={this.props.restart}>New Game</Link>
+          </div>
+          <div className= 'head' >Score: {this.props.score}</div>
+        </div>
+        
+        
       </div>)
 
   }

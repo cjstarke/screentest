@@ -1,1 +1,1 @@
-export const API_URL = 'https://opentdb.com/api.php?amount=10&category=11&type=multiple&difficulty='
+export const API_URL = 'https://opentdb.com/api.php?amount=5&category=11&type=multiple&difficulty='

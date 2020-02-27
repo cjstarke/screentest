@@ -29,7 +29,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header score={this.state.score} restart={this.restartScore}/>
-        <Container score={this.setScore} restart={this.restartScore}/>
+        <Container score={this.setScore} number={this.state.score} restart={this.restartScore}/>
       </div>)
   }
   

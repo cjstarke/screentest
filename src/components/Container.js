@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Question from '../screens/Question'
 import NewGame from '../screens/NewGame'
-import { Link, Route, Switch, Redirect } from 'react-router-dom'
+import { Route,  Redirect } from 'react-router-dom'
 import FinalScreen from '../screens/FinalScreen'
 import { API_URL } from '../constants'
 import axios from 'axios'

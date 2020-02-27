@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Button from '../components/Button'
 import ShuffleArr from '../components/ShuffleArr'
 import Replace from '../components/Replace'
-import { Link, Route, Switch, Redirect, } from 'react-router-dom'
 
 
 
@@ -133,7 +132,7 @@ class Question extends Component {
     const dead = 0
     return (
       <div className='question'>
-        {this.state.isloading || this.state.answers === undefined  ? (<div>start over man</div>) : (<>
+        {this.state.isloading || this.state.answers === undefined  ? (<div className ='heading'>why are you here? start over</div>) : (<>
           <div className='subhead'>Question {quest}</div>
           <div className='subsubhead'>{Replace(questions[id].question)}</div>
           <div className='answers'>{this.displayAnswers(this.state.answers)}</div>

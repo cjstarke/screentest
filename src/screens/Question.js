@@ -21,9 +21,6 @@ class Question extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.props.api)
-    console.log('hello')
-    console.log(this.props.location)
     this.setState({
       questions: this.props.questions,
       id: this.props.match.params.id,
@@ -31,7 +28,6 @@ class Question extends Component {
       answers: undefined,
       gotapi: this.props.api
     }) 
-    console.log(`state id: ${this.state.id}`)
   }
   randomAnswer = () => {
     const thisQ = this.state.questions[this.state.id]
@@ -47,11 +43,9 @@ class Question extends Component {
     this.setState({
       answers: newanswers
     })
-    console.log(`state answers: ${newanswers}`)
   
   }
   displayAnswers = (answers) => {
-    console.log('display answers')
     return (
       <>
         
@@ -112,8 +106,6 @@ class Question extends Component {
     this.props.score(num)
     const oldid = parseInt(this.props.match.params.id)
     const newid = (oldid + 1)
-    console.log(newid)
-    console.log(e.target.value)
     if (newid < 5) {
       setTimeout(() => {
         this.setState({
@@ -133,7 +125,6 @@ class Question extends Component {
   }
   
   render() {
-    console.log(this.state.gotapi)
     const { questions, id } = this.state
     const quest = parseInt(id) + 1
     if (this.state.answers === undefined && this.state.gotapi === true) {

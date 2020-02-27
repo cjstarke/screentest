@@ -18,7 +18,6 @@ class App extends Component {
     this.setState((prevState) => ({
       score: prevState.score*1 + number*1
     }))
-    console.log(`state score: ${this.state.score}`)
   }
   restartScore = () => {
     this.setState({

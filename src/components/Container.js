@@ -34,7 +34,6 @@ class Container extends Component {
  
     try {
       const response = await axios.get(`${api}${level}`)
-      console.log(response.data.results)
       this.setState({
         questions: response.data.results,
         isloading: false,

@@ -120,6 +120,37 @@ span {
   height: 18vh;
 }
 
+@media only screen and (max-width: 950px) {
+  .start {
+    width: 80vw;
+  }
+  .answers {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex: none;
+    align-content: center;
+    
+  }
+  .answer {
+    width: 80vw;
+    font-size: 2.5vh;
+  }
+  .subhead {
+    font-size: 4vh;
+  }
+  .subsubhead {
+    font-size: 2.5vh;
+  }
+  .playagain {
+    width: 80vw;
+  }
+  .heading {
+    font-size: 6vh;
+  }
+
+}
+
 
 
 

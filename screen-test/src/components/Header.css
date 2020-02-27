@@ -6,7 +6,7 @@
   height: 10vh;
   color: #29335c;
   background-color: white;
-  font-size: 200%;
+  font-size: 4vh;
 
 }
 .logo {
@@ -17,4 +17,21 @@
 }
 .head {
   margin: 0 4%;
+}
+.headerright {
+  width: 45vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 4vh;
+}
+@media only screen and (max-width: 950px) {
+  .logo {
+    display: none;
+  }
+  .headerright {
+    width: 100vw;
+    font-size: 4vh;
+  
+  }
 }

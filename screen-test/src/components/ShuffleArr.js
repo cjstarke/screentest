@@ -1,20 +1,21 @@
 import React from 'react'
 
-const ShuffleArr = (arr) => {
-  let currentIndex = arr.length;
-	let temporaryValue, randomIndex;
+const ShuffleArr = (array) => {
+  let currentIndex = array.length
+  let tempValue
+  let randomIndex
 
 	
 	while (0 !== currentIndex) {
 	
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex -= 1;
+		randomIndex = Math.floor(Math.random() * currentIndex)
+		currentIndex -= 1
 
-		temporaryValue = arr[currentIndex];
-		arr[currentIndex] = arr[randomIndex];
-		arr[randomIndex] = temporaryValue;
+		tempValue = array[currentIndex]
+		array[currentIndex] = array[randomIndex]
+		array[randomIndex] = tempValue
 	}
 
-	return arr;
+	return array
 }
 export default ShuffleArr

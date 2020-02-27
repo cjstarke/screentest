@@ -16,12 +16,14 @@ class Header extends Component {
         <div className='logodiv head'>
           <img src='https://i.imgur.com/w6JVp8u.png' alt='logo' className= 'logo'/>
         </div>
-        <div>
-        <Link to= '/' onClick={this.props.restart}>
-          New Game
-        </Link>
+        <div className='headerright'>
+          <div>
+            <Link to= '/' onClick={this.props.restart}>New Game</Link>
+          </div>
+          <div className= 'head' >Score: {this.props.score}</div>
         </div>
-        <div className= 'head' >Score: {this.props.score}</div>
+        
+        
       </div>)
 
   }

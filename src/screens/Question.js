@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import Button from '../components/Button'
 import ShuffleArr from '../components/ShuffleArr'
 import Replace from '../components/Replace'
-import { Link, Route, Switch, Redirect, } from 'react-router-dom'
-
-
 
 
 class Question extends Component {
@@ -21,9 +18,6 @@ class Question extends Component {
   }
 
   componentDidMount = () => {
-    console.log(this.props.api)
-    console.log('hello')
-    console.log(this.props.location)
     this.setState({
       questions: this.props.questions,
       id: this.props.match.params.id,
@@ -31,7 +25,6 @@ class Question extends Component {
       answers: undefined,
       gotapi: this.props.api
     }) 
-    console.log(`state id: ${this.state.id}`)
   }
   randomAnswer = () => {
     const thisQ = this.state.questions[this.state.id]
@@ -47,14 +40,19 @@ class Question extends Component {
     this.setState({
       answers: newanswers
     })
+<<<<<<< HEAD
     
   
   }
   displayAnswers = (answers) => {
    
+=======
+  
+  }
+  displayAnswers = (answers) => {
+>>>>>>> 0483b54faef9493fdf3b1577abcca6f9b4bed27b
     return (
       <>
-        
           <Button
             name={answers[0].ans}
             value={answers[0].guess}
@@ -65,8 +63,7 @@ class Question extends Component {
             number= {answers[0].number}
             
           />
-       
-        
+
           <Button
             name={answers[1].ans}
             value={answers[1].guess}
@@ -119,8 +116,6 @@ class Question extends Component {
     this.props.score(num)
     const oldid = parseInt(this.props.match.params.id)
     const newid = (oldid + 1)
-    console.log(newid)
-    console.log(e.target.value)
     if (newid < 5) {
       setTimeout(() => {
         this.setState({
@@ -140,16 +135,15 @@ class Question extends Component {
   }
   
   render() {
-    console.log(this.state.gotapi)
     const { questions, id } = this.state
     const quest = parseInt(id) + 1
     if (this.state.answers === undefined && this.state.gotapi === true) {
       this.randomAnswer()
     }
-    const dead = 0
+  
     return (
       <div className='question'>
-        {this.state.isloading || this.state.answers === undefined  ? (<div>start over man</div>) : (<>
+        {this.state.isloading || this.state.answers === undefined  ? (<div className ='heading'>why are you here? start over</div>) : (<>
           <div className='subhead'>Question {quest}</div>
           <div className='subsubhead'>{Replace(questions[id].question)}</div>
           <div className='answers'>{this.displayAnswers(this.state.answers)}</div>

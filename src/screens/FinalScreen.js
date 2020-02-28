@@ -5,7 +5,6 @@ import '../components/Container.css'
 
 function FinalScreen(props) {
   const finalscore = props.score
-  console.log(finalscore)
   function guess() {
     if (finalscore < 2) {
       return (<>Thats terrible!</>)

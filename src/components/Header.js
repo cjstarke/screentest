@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link, Route, Switch, Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './Header.css'
 
 class Header extends Component {

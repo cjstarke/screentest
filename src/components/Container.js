@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Question from '../screens/Question'
 import NewGame from '../screens/NewGame'
-import { Link, Route, Switch, Redirect } from 'react-router-dom'
+import { Route,  Redirect } from 'react-router-dom'
 import FinalScreen from '../screens/FinalScreen'
 import { API_URL } from '../constants'
 import axios from 'axios'
@@ -34,7 +34,6 @@ class Container extends Component {
  
     try {
       const response = await axios.get(`${api}${level}`)
-      console.log(response.data.results)
       this.setState({
         questions: response.data.results,
         isloading: false,

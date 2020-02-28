@@ -125,7 +125,7 @@ class Question extends Component {
     if (this.state.answers === undefined && this.state.gotapi === true) {
       this.randomAnswer()
     }
-    const dead = 0
+  
     return (
       <div className='question'>
         {this.state.isloading || this.state.answers === undefined  ? (<div className ='heading'>why are you here? start over</div>) : (<>

@@ -38,20 +38,20 @@ class Question extends Component {
     const right = Replace(thisQ.correct_answer)
     const wrong = thisQ.incorrect_answers
     let firstAnswers = [ 
-      {'ans': right, 'guess': 1, 'color': '', 'number': 1},
-      {'ans': Replace(wrong[0]), 'guess': 0, 'color': '', 'number': 2},
-      {'ans': Replace(wrong[1]), 'guess': 0, 'color': '', 'number': 3},
-      { 'ans': Replace(wrong[2]), 'guess': 0, 'color': '', 'number': 4}
+      {'ans': right, 'guess': 1, 'color': '', 'number': 0},
+      {'ans': Replace(wrong[0]), 'guess': 0, 'color': '', 'number': 1},
+      {'ans': Replace(wrong[1]), 'guess': 0, 'color': '', 'number': 2},
+      { 'ans': Replace(wrong[2]), 'guess': 0, 'color': '', 'number': 3}
     ]
     const newanswers = ShuffleArr(firstAnswers)
     this.setState({
       answers: newanswers
     })
-    console.log(`state answers: ${newanswers}`)
+    
   
   }
   displayAnswers = (answers) => {
-    console.log('display answers')
+   
     return (
       <>
         
@@ -102,12 +102,19 @@ class Question extends Component {
   
   onAnswer = (e) => {
     const num = e.target.value
+    console.log(e.target.number)
+  
     for (let index = 0; index <= 3; index++) {
       if (this.state.answers[index].guess === 1) {
         let  answers = {...this.state.answers}
         answers[index].color = 'green'
         this.setState({answers})
       } 
+    }
+    if (e.target.guess !== 1) {
+      let  answers = {...this.state.answers}
+        answers[0].color = 'red'
+        this.setState({answers})
     }
     this.props.score(num)
     const oldid = parseInt(this.props.match.params.id)

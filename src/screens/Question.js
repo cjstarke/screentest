@@ -4,8 +4,6 @@ import ShuffleArr from '../components/ShuffleArr'
 import Replace from '../components/Replace'
 
 
-
-
 class Question extends Component {
   constructor(props) {
     super(props)
@@ -47,7 +45,6 @@ class Question extends Component {
   displayAnswers = (answers) => {
     return (
       <>
-        
           <Button
             name={answers[0].ans}
             value={answers[0].guess}
@@ -58,8 +55,7 @@ class Question extends Component {
             number= {answers[0].number}
             
           />
-       
-        
+
           <Button
             name={answers[1].ans}
             value={answers[1].guess}

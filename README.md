@@ -1,4 +1,5 @@
-[!gif](https://media.giphy.com/media/Wn74RUT0vjnoU98Hnt/giphy.gif)
+## Link
+https://screentest.netlify.com/
 
 ## Title
 
@@ -6,7 +7,7 @@ Screen Test
 
 ## Description
 
-Screen Test is a simple movie trivia game, displaying one question with four multiple choice answers at a time on the screen. after 10 questions, the user recieves a score based off of how many questions they correctly answered. it requires the functionality of fetching an array of question objects from an api and displaying them one by one as the user iterates through them.
+Screen Test is a simple movie trivia game, displaying one question with four multiple choice answers at a time on the screen. after 5 questions, the user recieves a score based off of how many questions they correctly answered. it requires the functionality of fetching an array of question objects from an api and displaying them one by one as the user iterates through them.
 
 ## wireframes
 ### phone page start

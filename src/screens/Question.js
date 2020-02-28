@@ -91,6 +91,9 @@ class Question extends Component {
   
   onAnswer = (e) => {
     const num = e.target.value
+    console.log(e.target.number)
+    console.log(e.target.name)
+    console.log(e.target.color)
     for (let index = 0; index <= 3; index++) {
       if (this.state.answers[index].guess === 1) {
         let  answers = {...this.state.answers}

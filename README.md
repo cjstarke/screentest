@@ -4,7 +4,8 @@
 
 ## Description
 
-Screen Test is a simple movie trivia game, displaying one question with four multiple choice answers at a time on the screen. after 5 questions, the user recieves a score based off of how many questions they correctly answered. it requires the functionality of fetching an array of question objects from an api and displaying them one by one as the user iterates through them.
+Screen Test is a React application that functions as a simple movie trivia game, displaying one question with four multiple choice answers at a time on the screen. after 5 questions, the user recieves a score based off of how many questions they correctly answered. it requires the functionality of fetching an array of question objects from an api and displaying them one by one as the user iterates through them.
+
 
 ## API
 [OpenTDB](https://opentdb.com/api.php?amount=10&category=11)
